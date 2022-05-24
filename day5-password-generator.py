@@ -25,11 +25,12 @@ if (nr_length - nr_symbols) > nr_numbers:
     password += random.choice(letters)
 
   for symbol_choice in range(1, nr_symbols + 1):
-    password.insert(random.randint(0, nr_letters - 1), random.choice(symbols))
+    password.append(random.choice(symbols))
 
   for number_choice in range(1, nr_numbers + 1):
-    password.insert(random.randint(0, (nr_letters + nr_symbols) - 1), random.choice(numbers))
+    password.append(random.choice(numbers))
 
+  random.shuffle(password)
   password = "".join(password)
   print(password)
 else:
