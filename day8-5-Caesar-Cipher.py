@@ -1,5 +1,3 @@
-from base64 import encode
-
 should_end = False
 
 def encrypt_and_decrypt(text, shift):
